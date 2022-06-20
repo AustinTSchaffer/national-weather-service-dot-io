@@ -1,0 +1,94 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/38.02,-78.45",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -78.450000000000003,
+            38.020000000000003
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/38.02,-78.45",
+        "@type": "wx:Point",
+        "cwa": "LWX",
+        "forecastOffice": "https://api.weather.gov/offices/LWX",
+        "gridId": "LWX",
+        "gridX": 52,
+        "gridY": 26,
+        "forecast": "https://api.weather.gov/gridpoints/LWX/52,26/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/LWX/52,26/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/LWX/52,26",
+        "observationStations": "https://api.weather.gov/gridpoints/LWX/52,26/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.444822000000002,
+                    38.032598999999998
+                ]
+            },
+            "properties": {
+                "city": "Pantops",
+                "state": "VA",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 1472.5347374203
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 197
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/VAZ037",
+        "county": "https://api.weather.gov/zones/county/VAC003",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/VAZ037",
+        "timeZone": "America/New_York",
+        "radarStation": "KLWX"
+    }
+}
