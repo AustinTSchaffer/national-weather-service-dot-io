@@ -1,0 +1,188 @@
+_type: export
+__export_format: 4
+__export_date: 2022-06-23T04:08:21.573Z
+__export_source: insomnia.desktop.app:v2022.4.2
+resources:
+  - _id: req_9c05b07c90764f52a72d204b9bf9f8d4
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655957281317
+    created: 1655956881434
+    url: "{{ _.baseUrl }}/points/{{ _.lat }},{{ _.lon }}"
+    name: /points/{here}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_087e16f779d6458593bd911af21e57de
+        name: Accept
+        value: "{{ _.accept.GeoJSON }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1655956881434
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_13d288ba15ef41e19b1769afb91c42b8
+    parentId: null
+    modified: 1655954294457
+    created: 1655954294457
+    name: Weather.Gov API
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_f8ea91d83622430cac4f614b920d21f6
+    parentId: fld_70cd1beb7564453faa8e4fe11a2ee2f2
+    modified: 1655956869677
+    created: 1655955724360
+    url: "{{ _.baseUrl }}/alerts/active"
+    name: /alerts/active
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655956772103
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_70cd1beb7564453faa8e4fe11a2ee2f2
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655956771953
+    created: 1655956771953
+    name: Metadata
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1655956771953
+    _type: request_group
+  - _id: req_321e73bf447d41fabc00734af45d3053
+    parentId: fld_70cd1beb7564453faa8e4fe11a2ee2f2
+    modified: 1655956787821
+    created: 1655955942890
+    url: "{{ _.baseUrl }}/alerts/types"
+    name: /alerts/types
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655956772003
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5ed7932f3e18445ea459692083da6cad
+    parentId: fld_70cd1beb7564453faa8e4fe11a2ee2f2
+    modified: 1655956871403
+    created: 1655954334249
+    url: "{{ _.baseUrl }}/glossary"
+    name: /glossary
+    description: Outputs a ton of useful terms that are common across weather reporting.
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655956771953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_86ed1216d3a64ee3aae9433ca97fb5a0
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655956818736
+    created: 1655955190074
+    url: "{{ _.baseUrl }}/stations"
+    name: /stations (in VA)
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_74c15d33a0ff4f528188ebfdf7c7e7ca
+        name: state
+        value: VA
+        description: ""
+    headers:
+      - id: pair_d999cbc973d94ae2ab099fd375a3b12b
+        name: accept
+        value: "{{ _.accept.GeoJSON }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1655955190074
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_5c6987708e46b88180accf01c2dcf65128e4ffed
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655956935666
+    created: 1655954294461
+    name: Base Environment
+    data:
+      baseUrl: https://api.weather.gov
+      accept:
+        GeoJSON: application/geo+json
+        JSON-LD: application/ld+json
+        DWML: application/vnd.noaa.dwml+xml
+        OXML: application/vnd.noaa.obs+xml
+        CAP: application/cap+xml
+        ATOM: application/atom+xml
+      lat: 38.031052
+      lon: -78.474159
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - accept
+        - lat
+        - lon
+      "&~|accept":
+        - GeoJSON
+        - JSON-LD
+        - DWML
+        - OXML
+        - CAP
+        - ATOM
+    color: null
+    isPrivate: false
+    metaSortKey: 1655954294461
+    _type: environment
+  - _id: jar_5c6987708e46b88180accf01c2dcf65128e4ffed
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655954294462
+    created: 1655954294462
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_dca3c401569544e2a39059ef3b595611
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1655954294458
+    created: 1655954294458
+    fileName: Weather.Gov API
+    contents: ""
+    contentType: yaml
+    _type: api_spec
