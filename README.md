@@ -29,8 +29,10 @@ The DWML XML Schema is defined here: https://graphical.weather.gov/xml/DWMLgen/s
 
 Apparently Weather.gov actually does have an API:
 
-- https://www.weather.gov/documentation/services-web-api
-- https://weather-gov.github.io/api/gridpoints
+- Documentation: https://www.weather.gov/documentation/services-web-api
+- Barely any additional info: https://weather-gov.github.io/api/
+- GitHub repo: https://github.com/weather-gov/api
+- OpenAPI Spec: https://api.weather.gov/openapi.json
 
 It seems like the standard "what's the weather going to be like today/tomorrow?" kind of data/analysis should be provided by the `/gridpoints/{wfo}/{x},{y}` endpoints. There's a few endpoints in this series:
 
