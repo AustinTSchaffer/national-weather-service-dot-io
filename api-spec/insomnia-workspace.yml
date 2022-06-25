@@ -1,11 +1,40 @@
 _type: export
 __export_format: 4
-__export_date: 2022-06-23T04:23:07.934Z
+__export_date: 2022-06-25T14:57:55.990Z
 __export_source: insomnia.desktop.app:v2022.4.2
 resources:
+  - _id: req_94e93083ccf7423e86b6892ee0b4b679
+    parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
+    modified: 1656169010932
+    created: 1656168991122
+    url: "{{ _.base_url }}/openapi.json"
+    name: /openapi.json
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1656168991122
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_13d288ba15ef41e19b1769afb91c42b8
+    parentId: null
+    modified: 1655957554343
+    created: 1655954294457
+    name: weather.gov API 1.8.3
+    description: weather.gov API
+    scope: collection
+    _type: workspace
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b871a7ca85
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655958047558
+    modified: 1656169062628
     created: 1655957554142
     url: "{{ base_url }}/points/{{ point }}"
     name: Start Here /points/{point}
@@ -28,14 +57,6 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: wrk_13d288ba15ef41e19b1769afb91c42b8
-    parentId: null
-    modified: 1655957554343
-    created: 1655954294457
-    name: weather.gov API 1.8.3
-    description: weather.gov API
-    scope: collection
-    _type: workspace
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b826185744
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
     modified: 1655957595278
@@ -382,7 +403,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b83ee0025a
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957947722
+    modified: 1656168823399
     created: 1655957554180
     url: "{{ base_url }}/gridpoints/{{ wfo }}/{{ x }},{{ y }}"
     name: /gridpoints/{wfo}/{x},{y}
@@ -407,7 +428,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8cdffcc2a
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655958090705
+    modified: 1656168876449
     created: 1655957554178
     url: "{{ base_url }}/gridpoints/{{ wfo }}/{{ x }},{{ y }}/forecast"
     name: /gridpoints/{wfo}/{x},{y}/forecast
@@ -440,7 +461,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8b8f259be
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957664087
+    modified: 1656168942445
     created: 1655957554177
     url: "{{ base_url }}/gridpoints/{{ wfo }}/{{ x }},{{ y }}/forecast/hourly"
     name: /gridpoints/{wfo}/{x},{y}/forecast/hourly
@@ -461,6 +482,10 @@ resources:
         disabled: false
         value: "{{ userAgent }}"
         id: pair_2fcd0b55feee41d19b14c6487e9ed064
+      - id: pair_63ebb7812bf24ba69772a4be9a62d0a2
+        name: Accept
+        value: "{{ _.accept['JSON-LD'] }}"
+        description: ""
     authentication: {}
     metaSortKey: -1655957554177
     isPrivate: false
@@ -473,7 +498,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8a2498683
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957665834
+    modified: 1656167493342
     created: 1655957554176
     url: "{{ base_url }}/gridpoints/{{ wfo }}/{{ x }},{{ y }}/stations"
     name: /gridpoints/{wfo}/{x},{y}/stations
@@ -571,7 +596,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b87e105c4e
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655958041897
+    modified: 1656167479602
     created: 1655957554166
     url: "{{ base_url }}/thumbnails/satellite/{{ area }}"
     name: /thumbnails/satellite/{area}
@@ -596,7 +621,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8fe24d1c5
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655958044741
+    modified: 1656167478552
     created: 1655957554163
     url: "{{ base_url }}/stations/{{ stationId }}/observations"
     name: /stations/{stationId}/observations
@@ -633,7 +658,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b81cd8c845
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957554161
+    modified: 1656167477584
     created: 1655957554161
     url: "{{ base_url }}/stations/{{ stationId }}/observations/latest"
     name: /stations/{stationId}/observations/latest
@@ -644,10 +669,12 @@ resources:
       - name: require_qc
         disabled: true
         value: "true"
+        id: pair_56c543c44930412f8aebe75d1d1fed40
     headers:
       - name: User-Agent
         disabled: false
         value: "{{ userAgent }}"
+        id: pair_10cf9c5a3ed24f8e98654753fb4c8fac
     authentication: {}
     metaSortKey: -1655957554161
     isPrivate: false
@@ -660,7 +687,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8ec468ccc
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957554160
+    modified: 1656167475982
     created: 1655957554160
     url: "{{ base_url }}/stations/{{ stationId }}/observations/{{ time }}"
     name: /stations/{stationId}/observations/{time}
@@ -672,6 +699,7 @@ resources:
       - name: User-Agent
         disabled: false
         value: "{{ userAgent }}"
+        id: pair_d9cbd928f7354f78a1f2c4b0b08a9e0e
     authentication: {}
     metaSortKey: -1655957554160
     isPrivate: false
@@ -684,7 +712,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8dcb20400
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957554158
+    modified: 1656167472899
     created: 1655957554158
     url: "{{ base_url }}/stations"
     name: /stations
@@ -695,16 +723,20 @@ resources:
       - name: id
         disabled: true
         value: string
+        id: pair_fd42f2fe693841b5bc1901c3f4c1273f
       - name: state
         disabled: true
         value: ""
+        id: pair_b6aa6a53984f4cb4abef3dc7550aaafd
       - name: limit
         disabled: true
         value: "0"
+        id: pair_6b90a0744a2a427b92c5c249f17bf0b3
     headers:
       - name: User-Agent
         disabled: false
         value: "{{ userAgent }}"
+        id: pair_3d0a73f13c614aefb03212b5fe26bcb6
     authentication: {}
     metaSortKey: -1655957554158
     isPrivate: false
@@ -717,7 +749,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b8c239700c
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957554156
+    modified: 1656167471196
     created: 1655957554156
     url: "{{ base_url }}/stations/{{ stationId }}"
     name: /stations/{stationId}
@@ -729,6 +761,7 @@ resources:
       - name: User-Agent
         disabled: false
         value: "{{ userAgent }}"
+        id: pair_bb4949597beb4bbf9287daed5082aa2c
     authentication: {}
     metaSortKey: -1655957554156
     isPrivate: false
@@ -1436,7 +1469,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b816cacab1
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957719860
+    modified: 1656167415929
     created: 1655957554098
     url: "{{ base_url }}/zones/forecast/{{ zoneId }}/observations"
     name: /zones/forecast/{zoneId}/observations
@@ -1473,7 +1506,7 @@ resources:
     _type: request
   - _id: req_wrk_13d288ba15ef41e19b1769afb91c42b82d78867e
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957719027
+    modified: 1656167413720
     created: 1655957554097
     url: "{{ base_url }}/zones/forecast/{{ zoneId }}/stations"
     name: /zones/forecast/{zoneId}/stations
@@ -1498,24 +1531,11 @@ resources:
     _type: request
   - _id: env_5c6987708e46b88180accf01c2dcf65128e4ffed
     parentId: wrk_13d288ba15ef41e19b1769afb91c42b8
-    modified: 1655957554335
+    modified: 1656167246944
     created: 1655954294461
     name: Base environment
-    data:
-      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
-    dataPropertyOrder:
-      "&":
-        - baseUrl
-        - accept
-        - lat
-        - lon
-      "&~|accept":
-        - GeoJSON
-        - JSON-LD
-        - DWML
-        - OXML
-        - CAP
-        - ATOM
+    data: {}
+    dataPropertyOrder: {}
     color: null
     isPrivate: false
     metaSortKey: 1655954294461
@@ -7369,14 +7389,14 @@ resources:
     _type: api_spec
   - _id: env_env_5c6987708e46b88180accf01c2dcf65128e4ffed_sub
     parentId: env_5c6987708e46b88180accf01c2dcf65128e4ffed
-    modified: 1655958085405
+    modified: 1656169051879
     created: 1655957554332
     name: OpenAPI env
     data:
       scheme: https
       base_path: ""
       host: api.weather.gov
-      userAgent: userAgent
+      userAgent: github.com/AustinTSchaffer
       base_url: https://api.weather.gov/
       lat: 38.031052
       lon: -78.474159
@@ -7387,6 +7407,13 @@ resources:
         'b64::JC5wcm9wZXJ0aWVzLmdyaWRY::46b', 'never', 60 %}"
       y: "{% response 'body', 'req_wrk_13d288ba15ef41e19b1769afb91c42b871a7ca85',
         'b64::JC5wcm9wZXJ0aWVzLmdyaWRZ::46b', 'never', 60 %}"
+      accept:
+        GeoJSON: application/geo+json
+        JSON-LD: application/ld+json
+        DWML: application/vnd.noaa.dwml+xml
+        OXML: application/vnd.noaa.obs+xml
+        CAP: application/cap+xml
+        ATOM: application/atom+xml
     dataPropertyOrder:
       "&":
         - scheme
@@ -7400,6 +7427,14 @@ resources:
         - wfo
         - x
         - y
+        - accept
+      "&~|accept":
+        - GeoJSON
+        - JSON-LD
+        - DWML
+        - OXML
+        - CAP
+        - ATOM
     color: null
     isPrivate: false
     metaSortKey: 1655957554332
