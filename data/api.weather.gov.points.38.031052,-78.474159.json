@@ -42,51 +42,51 @@
             }
         }
     ],
-    "id": "https://api.weather.gov/points/38.02,-78.45",
+    "id": "https://api.weather.gov/points/38.0311,-78.4742",
     "type": "Feature",
     "geometry": {
         "type": "Point",
         "coordinates": [
-            -78.450000000000003,
-            38.020000000000003
+            -78.474199999999996,
+            38.031100000000002
         ]
     },
     "properties": {
-        "@id": "https://api.weather.gov/points/38.02,-78.45",
+        "@id": "https://api.weather.gov/points/38.0311,-78.4742",
         "@type": "wx:Point",
         "cwa": "LWX",
         "forecastOffice": "https://api.weather.gov/offices/LWX",
         "gridId": "LWX",
-        "gridX": 52,
+        "gridX": 51,
         "gridY": 26,
-        "forecast": "https://api.weather.gov/gridpoints/LWX/52,26/forecast",
-        "forecastHourly": "https://api.weather.gov/gridpoints/LWX/52,26/forecast/hourly",
-        "forecastGridData": "https://api.weather.gov/gridpoints/LWX/52,26",
-        "observationStations": "https://api.weather.gov/gridpoints/LWX/52,26/stations",
+        "forecast": "https://api.weather.gov/gridpoints/LWX/51,26/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/LWX/51,26/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/LWX/51,26",
+        "observationStations": "https://api.weather.gov/gridpoints/LWX/51,26/stations",
         "relativeLocation": {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -78.444822000000002,
-                    38.032598999999998
+                    -78.485381000000004,
+                    38.037658
                 ]
             },
             "properties": {
-                "city": "Pantops",
+                "city": "Charlottesville",
                 "state": "VA",
                 "distance": {
                     "unitCode": "wmoUnit:m",
-                    "value": 1472.5347374203
+                    "value": 1220.9395048353001
                 },
                 "bearing": {
                     "unitCode": "wmoUnit:degree_(angle)",
-                    "value": 197
+                    "value": 126
                 }
             }
         },
         "forecastZone": "https://api.weather.gov/zones/forecast/VAZ037",
-        "county": "https://api.weather.gov/zones/county/VAC003",
+        "county": "https://api.weather.gov/zones/county/VAC540",
         "fireWeatherZone": "https://api.weather.gov/zones/fire/VAZ037",
         "timeZone": "America/New_York",
         "radarStation": "KLWX"
